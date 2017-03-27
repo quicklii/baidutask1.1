@@ -1,0 +1,390 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>任务六：通过HTML及CSS模拟报纸排版</title>
+	</head>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.test{
+		border: 1px solid #ff0;
+	}
+	
+		header{
+			height: 62px;
+			width: 95%;
+			margin: 0 auto;
+			border-bottom: 3px solid #938e8c;
+			overflow: hidden;
+		}
+		header figure{
+			width: 110px;
+			height: 100%;
+			background: #d45d5c;
+			position: relative;
+			float: left;
+		}
+		header figcaption{
+			position: absolute;
+			bottom: 0;
+			font-family: "黑体";
+			font-size: 12px;
+			color: #fff;
+		}
+		header h6{
+			float: right;
+			font-family: "黑体";
+			font-size: 12px;
+			color: #d45d5c;
+			font-weight: normal;
+			margin-right: 5px;
+			margin-top:40px;
+		}
+		div.content{
+			width: 95%;
+			margin:40px auto 0 auto;
+			overflow: hidden;
+		}
+		.content .preface{
+			width: 74%;
+			display: inline-block;
+		}
+		div.content .preface .banner{
+			width: 650px;
+			height: 305px;
+			background-color: #e2baa1;
+		}
+		div.content .preface .intro{
+			overflow: hidden;
+			margin-top:40px;
+		}
+		div.content .preface .intro div{
+			padding:0 10px;
+			float: left;
+		}
+		div.content .preface .intro div h1{
+			line-height: 30px;
+			font-family: "微软雅黑";
+			font-size: 16px;
+			text-decoration: underline;
+			margin-bottom: 8px;
+		}
+		div.content .preface .intro div p{
+			font-family: "宋体";
+			font-size: 12px;
+			color: #767777;
+			line-height: 16px;
+		}
+		div.content .preface .intro-what{
+			width: 38%;
+		}
+		div.content .preface .intro-when{
+			width: 33%;
+		}
+		div.content .preface .intro-how{
+			width: 22%;
+		}
+		div.content .preface .intro-what h1{
+			color: #418c59;
+		}
+		div.content .preface .intro-when h1{
+			color: #d2994f;
+		}
+		div.content .preface .intro-how h1{
+			color: #cc7680;
+		}
+		div.content .content-left{
+			width: 50%;
+			float:left;
+		}
+		div.content .content-left h1{
+			font-family: "黑体";
+			font-size: 42px;
+			color: #11456b;
+		}
+		div.content .content-left h1 span{
+			font-family: "黑体";
+			font-size: 72px;
+			color: #f5e327;
+			font-style: initial;
+		}
+		div.content .content-left h2{
+			font-size:33px;
+			font-family: "黑体";
+			color:#11456b;
+			border-bottom: 3px solid #11456b;
+			margin:10px 0;
+		}
+		div.content .content-left p span{
+			font-size: 70px;
+			line-height: 70px;
+			margin:0.1em;
+			font-family: "微软雅黑";
+			color: #f5e327;
+			float: left;
+		}
+		div.content .content-left p{
+			font-family: "宋体";
+			font-size: 12px;
+			line-height: 16px;
+			color:#767777;
+			overflow: hidden;
+		}
+		div.content .content-left img{
+			float: right;
+			margin:2em;
+		}
+		div.content .content-right{
+			width:48%;
+			float: right;
+			margin-left: 20px;
+							
+		}
+		div.content .content-right .top-title{
+			position:relative;
+		}
+		div.content .content-right .top-title .top-t{
+			position:absolute;
+			width: 100%;
+			bottom:0;
+			height: 60px;
+			background-color:rgba(0,0,0,0.4) ;
+		}
+		div.content .content-right .top-title .top-t p{
+			float: left;
+			font-family: "微软雅黑";
+			font-size: 26px;
+			color: #fff;
+			line-height:42px;
+			width: 134px;
+			height: 42px;
+			border-left: 3px solid #72b16a;
+			margin:9px 0 9px 40px;
+		}
+		div.content .content-right .top-title .top-t h1{
+			font-weight: normal;
+			color: #72b16a;
+			font-family: "微软雅黑";
+			font-size: 12px;
+			float: left;
+			margin-top:30px;
+			font-style: initial;
+		}
+		div.content .content-right .con-r{
+			margin-top:20px;
+			background: #eeedd6;
+			padding:10px;
+		}
+		div.content .content-right .con-r ul{
+			list-style-image:repeating-radial-gradient(11) ;
+		}
+		.finally-box{
+			width: 100%;
+			height: 100px;
+			background-color: #ff0;
+		}
+		div.content aside{
+			width: 24%;
+			float: right;
+			margin-right: 0;
+			display: inline-block;
+			border-top: 3px solid #cc8091;
+		}
+		div.content aside h3{
+			font-weight: normal;
+			font-family: "微软雅黑";
+			font-size: 24px;
+			color:#000;
+			text-decoration: underline;
+			text-transform: capitalize;
+		}
+		div.content aside h4{
+			font-family: "宋体";
+			font-size: 12px;
+			color: #676767;
+			font-style:italic;
+		}
+		div.content aside h2{
+			font-family: "微软雅黑";
+			font-size: 116px;
+			color: #75b86b;
+			font-style:italic;
+			
+		}
+		div.content aside p{
+			font-size: 55px;
+			color: #cc8091;
+			font-family: "微软雅黑";
+			float: left;
+		}
+		div.content aside h5{
+			font-weight: normal;
+			font-size: 21px;
+			font-family: "微软雅黑";
+			color: #cc8091;
+			display: block;
+			margin-top:20px;
+		}
+		div.content aside h6{
+			font-size: 12px;
+			font-weight: normal;
+			font-family: "微软雅黑";
+			color: #231815;
+		}
+		footer{
+			width: 95%;
+			margin:0 auto;
+			margin-top:20px;
+			height: 60px;
+			border-top:2px solid #ccc;
+		}
+		footer h6{
+			text-align: right;
+			font-weight: normal;
+			font-family: "黑体";
+			font-size: 12px;
+			color: #d45d5c;
+		}
+	</style>
+	<body>
+		<header>
+			<figure>
+				<figcaption>ife.baidu.com</figcaption>
+			</figure>
+			<h6>2017.3.27</h6>
+		</header>
+		<div class="content">
+			<div class="preface test">
+				<div class="banner">
+					<img src="#">
+				</div>
+				<div class="intro">
+					<div class="intro-what">
+						<h1>what</h1>
+						<p>端前端前端端前端前端前端前端前端前端前
+端前端前端前端前端前端前端前端端前端前
+端端前端前端前端前端前端前端前端前端前
+端前端前端前端前端前端端前端前端端前端
+前端前端前端前端前端前端前端前端前端前
+端前端前端前端端前端前端端前端前端前端
+前端前端前端前端前端前端前端前端前端前
+端前端端前端前端前端前端前端前端前端前
+端前端端前端前端</p>
+					</div>
+					<div class="intro-when">
+						<h1>when</h1>
+						<p>
+							端前端前端端前端前端前端前端前端前端前
+端前端前端前端前端前端前端前端端前端前
+端端前端前端前端前端前端前端前端前端前
+端前端前端前端前端前端端前端前端端前端
+前端前端前端前端前端前端前端前端前端前
+端前端前端前端端前端前端端前端前端前端
+前端前端前端前端前端前端前端前端前端前
+端前端端前端前端前端前端前端前端前端前
+端前端端前端前端
+						</p>
+					</div>
+					<div class="intro-how">
+						<h1>how</h1>
+						<p>端前端前端端前端前端前端前端前端前端前
+端前端前端前端前端前端前端前端端前端前
+端端前端前端前端前端前端前端前端前端前
+端前端端前端前端</p>
+					</div>
+				</div>
+			</div>
+			<aside class="test">
+				<h3>about</h3>
+				<h3>technology</h3>
+				<h4>About technologe about technologe about technologe</h4>
+				<h2>700</h2>
+				<p>3.2</p>
+				<h5>css</h5>
+				<h6>csscsscsscsscsscsscsscsscsscsscss</h6>
+				
+			</aside>
+		</div>
+		<div class="content">
+			<div class="content-left">
+				<h1>
+					<span>THE</span>
+					TECHNOLOGE OF FRONT
+				</h1>
+				<h2>前端技术领域</h2>
+				<p>
+					<span>前</span>
+					<img src="http://img1.dog126.com/data/files/store_5925/goods_39/201203282047194612.jpg" width="167" height="288"/>
+					端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+					 前端前端前端前端前端前端前端前端前端前端前端前端前端前端 
+					   端前端前端前端前端前端前端前端前端
+					   端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+					 前端前端前端前端前端前端前端前端前端前端前端前端前端前端 
+					   端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+					 前端前端前端前端前端前端前端前端前端前端前端前端前端前端 
+					   端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+					 前端前端前端前端前端前端前端前端前端前端前端前端前端前端 
+					   端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+					 前端前端前端前端前端前端前端前端前端前端前端前端前端前端 
+					   端前端前端前端前端前端前端前端前端
+					   端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+					 前端前端前端前端前端前端前端前端前端前端前端前端前端前端 
+					   端前端前端前端前端前端前端前端前端
+					   端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+					 前端前端前端前端前端前端前端前端前端前端前端前端前端前端 
+					   端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+					 前端前端前端前端前端前端前端前端前端前端前端前端前端前端 
+					   端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+					 前端前端前端前端前端前端前端前端前端前端前端前端前端前端 
+					   端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+					 前端前端前端前端前端前端前端前端前端前端前端前端前端前端 
+					   端前端前端前端前端前端前端前端前端
+					   端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+					 前端前端前端前端前端前端前端前端前端前端前端前端前端前端 
+					   端前端前端前端前端前端前端前端前端
+					   端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+					 前端前端前端前端前端前端前端前端前端前端前端前端前端前端 
+					   端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+					 前端前端前端前端前端前端前端前端前端前端前端前端前端前端 
+					   端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+					 前端前端前端前端前端前端前端前端前端前端前端前端前端前端 
+					   端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+					 前端前端前端前端前端前端前端前端前端前端前端前端前端前端 
+					   端前端前端前端前端前端前端前端前端
+				</p>
+			</div>
+			<div class="content-right">
+				<div class="top-title">
+					<img src="http://img02.tooopen.com/images/20160522/tooopen_sy_163095578889.jpg" width="100%" height="100%" />
+					<div class="top-t">
+						<p>前端技术</p>
+						<h1>前端技术前端技术</h1>
+					</div>
+				</div>
+				<div class="cont-r">
+					<ul>
+						<li>
+							<p>前端前端---------------<span>前端</span></p>
+						</li>
+						<li>
+							<p>前端前端--------------<span>前端</span></p>
+						</li>
+						<li>
+							<p>前端前端------------<span>前端</span></p>
+						</li>
+						<li>
+							<p>前端前端------------<span>前端</span></p>
+						</li>
+					</ul>
+					<div class="finally-box"></div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<h6>ife.baidu.com</h6>
+		</footer>
+	</body>
+</html>
