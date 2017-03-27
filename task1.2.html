@@ -26,9 +26,15 @@ header ul li{
 	float: left;
 	margin-left: 15px;
 }
-main{
+.content{
+	position: relative;
 	background-color:#DDD;
-	padding: 20px;
+	overflow: hidden;
+}
+main{
+	padding: 10px 20px 20px 20px;
+	float: left;
+	width: 68%;
 }
 div.myAticle{
 	border: 2px outset #fff;
@@ -67,6 +73,9 @@ div.myAticle2 div{
 div.myAticle2 div h6{
 	text-align: center;
 }
+div.myAticle2 div img{
+	width: 150px;
+}
 div.myAticle table{
 	width: 100%;
 	border-collapse: collapse;
@@ -78,13 +87,14 @@ div.myAticle table tfoot{
 	background: #ccc;
 }
 aside{
-	margin-top: 20px;
+	position: absolute;
+	top:20px;
+	right: 20px;
+	width: 28%;
 	background:#fff;
 	border: 2px outset #fff;
+	
 }
-aside .myForm{
-	margin-left:30%;
-	}
 aside form p{
 	line-height: 40px;
 }
@@ -100,7 +110,7 @@ aside form .myTitle{
 	clear: right;
 }
 aside .myForm textarea{
-	width:600px;
+	width:200px;
 	height:150px;
 }
 input[type="submit"]{
@@ -132,7 +142,8 @@ footer{
 			</ul>
 			<div class="cle"></div>
 		</header>
-		<main>
+		<div class="content">
+			<main>
 			<div class="myAticle">
 				<h2>文章一级标题</h2>
 				<h3>文章二级标题</h3>
@@ -150,7 +161,7 @@ footer{
 					由我国自主设计的航母，目前主船体已在坞内合拢成型，正在开展设备安装和舾装等建造工作；
 					海军陆战队的建设，也将加快步伐。
 				</p>
-				<img src="img/logo_03.png" />
+				<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" />
 				<ul>
 					<li>列表项目一</li>
 					<li>列表项目二</li>
@@ -161,19 +172,19 @@ footer{
 				<h2>图片</h2>
 				<div>
 					<h6>这是一张好看的图片</h6>
-					<img src="img/logo_03.png"/>
+					<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png"/>
 				</div>
 				<div>
 					<h6>这是一张好看的图片</h6>
-					<img src="img/logo_03.png"/>
+					<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png"/>
 				</div>
 				<div>
 					<h6>这是一张好看的图片</h6>
-					<img src="img/logo_03.png"/>
+					<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png"/>
 				</div>
 				<div>
 					<h6>这是一张好看的图片</h6>
-					<img src="img/logo_03.png"/>
+					<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png"/>
 				</div>
 			</div>
 			<div class="myAticle">
@@ -235,7 +246,8 @@ footer{
 					</tfoot>
 				</table>
 			</div>
-			<aside>
+		</main>
+		<aside>
 				<h2>这里以后是一个侧栏，这是侧栏的标题</h2>
 				<h3>侧栏注册标题</h3>
 				<form class="myForm">
@@ -286,7 +298,7 @@ footer{
 					</p>
 				</form>
 			</aside>
-		</main>
+		</div>
 		<footer>版权所有&copy;</footer>
 	</body>
 </html>
