@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>任务一：零基础JavaScript编码（一）</title>
+	</head>
+	<body>
+		<div>
+			<p>
+				<label>今天的心情留言：</label>
+				<input type="text" id="api-text" />
+				<input type="button" value="确认" id="btn" />
+			</p>
+			<div>您输入的内容为：<span id="api-message">尚未输入</span></div>
+		</div>
+		<script type="text/javascript">
+			var oInput=document.getElementById("api-text");
+			var oInput2=document.getElementById("api-message");
+			var oBtn=document.getElementById("btn");
+			oBtn.onclick=function(){
+				oInput2.innerHTML=oInput.value;
+			};
+		</script>
+	</body>
+</html>
